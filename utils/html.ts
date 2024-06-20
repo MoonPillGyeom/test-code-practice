@@ -5,7 +5,10 @@ const htmlEscapes: Record<string, string> = {
   '"': "&quot;",
   "'": "&#39;",
 };
-
+// &lt;h2&gt;hello jest&lt;/h2&gt;
+// <h2>hello jest</h2>
+//<div className="bg-bule-500">bye jest</div>
+// &lt;div className=&quot;bg-blue-500&gt;bye jest&lt;/div&gt;
 const htmlUnescapes: Record<string, string> = {
   "&amp;": "&",
   "&lt;": "<",
@@ -37,7 +40,7 @@ function escape(string: string) {
 }
 
 /**
- * 이 메서드는 `escape`의 역으로 `string`의 HTML 엔터티 `&amp;`, `<`, `&gt;`, `&quot;` 및 
+ * 이 메서드는 `escape`의 역으로 `string`의 HTML 엔터티 `&amp;`, `<`, `&gt;`, `&quot;` 및
  * `&#39;`를 해당 문자로 변환합니다.
  *
  * @param {string} [string=''] 변환할 문자열.

@@ -1,13 +1,13 @@
 import shuffle from "./shuffle";
 
 describe("shuffle", () => {
-  const array = [1, 2, 3];
+  const array = [1, 2, 3, 4];
 
-  it("should return a new array", () => {
-    expect(shuffle(array)).not.toBe(array);
+  it("rand number", () => {
+    expect(shuffle(array)).not.toEqual(array);
   });
 
-  it("should contain the same elements after a collection is shuffled", () => {
-    expect(shuffle(array).sort()).toEqual(array);
+  it("random number sort", () => {
+    expect(shuffle(array).sort()).toBe(array.sort());
   });
 });
